@@ -1,0 +1,35 @@
+class ArrangeCalc:
+    def __init__(self,top):
+        self.top = top
+
+    def __add__(self,down):
+        space_lon = (max(len(self.top),len(down.top))+2)  ## this controls the spacing of upper number __ max(2,1)==2+2==4
+        space_st = (space_lon- int(len(self.top))) 
+        space_dt = ((space_lon- int(len(down.top)))-1)
+        line = '-'* space_lon
+        solution =int(self.top)+int(down.top)
+        return '\n'.join([' ' * (space_st) +self.top,'+' +' '*space_dt+ down.top,line,
+        ' '*(space_lon- int(len(str(solution))))+str(solution)])    
+    def __sub__(self,down):
+        space_lon = (max(len(self.top),len(down.top))+2)
+        space_st = (space_lon- int(len(self.top)))
+        space_dt = ((space_lon- int(len(down.top)))-1)
+        line = '-'* space_lon
+        solution =int(self.top)-int(down.top)
+        return '\n'.join([' ' * (space_st) +self.top,'-' +' '*space_dt+ down.top,line,
+        ' '*(space_lon- int(len(str(solution))))+str(solution)])    
+
+list = ["3227 + 8", "1 - 3801",]
+for i in list:
+    if '+' in i:
+        i = i.split(' + ')
+        print(ArrangeCalc(i[0]) + ArrangeCalc(i[1]))
+    else:
+        i = i.split(' - ')
+        print(ArrangeCalc(i[0]) - ArrangeCalc(i[1]))
+
+        
+print('***********')
+
+
+

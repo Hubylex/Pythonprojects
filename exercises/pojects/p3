@@ -1,0 +1,17 @@
+def factorial(x):
+   s = 1
+   while x>0:
+        s = s * x
+        x -= 1
+   return s
+
+def comb(n,r):
+    return int(factorial(n)/(factorial(n-r)*factorial(r)))
+print('PASCAL\'S TRIANGLE FOR N = 5')
+def pascal(n):
+   
+   for j in range(n):
+            yield comb(n,j)
+
+for i in pascal(7):
+    print(i,end=' ')

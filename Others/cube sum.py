@@ -16,3 +16,9 @@ print(sum_cubes(int(input('enter'))))
 def sum_cubes2(s):
     return (s*(s+1)/2)**2
 print(sum_cubes2(int(input('enter'))))
+
+
+## my other approach
+def square(n):
+    return sum([i**3 for i in range(n+1)])
+print(square(int(input('enter'))))

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lets Roll</title>
+  <link rel="stylesheet" type="text/css" href="head.css">
+</head>
+<body>
+  <header>
+    <h1 class="head">ANBERT GARDEN</h1>
+    <p class="head">MOTTO:FIRM AND DETERMINED</p>
+  </header>
+  <nav>
+    <h3>
+      <a href="index.html">HOME</a>
+      <a href="health-records.html">*OTHER INFO*</a>
+      <a href="pain.html">*PAIN*</a>
+      <a href="Tution.html">TUTION</a>
+    </h3>
+  </nav>
+  <main>
+    <form>
+      <ol>
+        <li>NAME OF PUPIL:
+          <input type="text" placeholder="SURNAME">
+          <input placeholder="OTHERNAMES">
+        </li>
+        <li>PLACE OF BIRTH:
+          <input type="text">
+          <ul>
+            <li>DATE OF BIRTH:
+              <input type="date">
+            </li>
+          </ul>
+        </l>
+        <li>TRIBE;
+          <input type="text">
+        </li>
+        <li>FATHER'S NAME:
+          <input type="text">
+          <ul>
+            <li>MOTHERS NAME:
+              <input type="text">
+            </li>
+          </ul>
+        </li>
+        <li>ADDRESS:
+          <input type="text">
+        </li>
+        <li>HOUSE NO.:
+          <input type="text">
+        </li>
+        <li>DATE OF ADMISSION:
+          <input type="date">
+        </li>
+        <li>CONTACT NUMBER:
+          <input type="text">
+        </li>
+        <li>ARE BOTH PARENTS ALIVE?</li>
+        <p>YES: <input type="checkbox"> NO: <input type="checkbox"></p>
+        <button>SUBMIT</button>
+      </ol>
+    </form>
+  </main>
+</body>
+</html>

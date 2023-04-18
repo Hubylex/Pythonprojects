@@ -1,0 +1,20 @@
+'''Input:
+M = 5, N = 4
+A[] = {2,3,7,10,12}
+B[] = {1,5,7,8}
+Output: 35
+Explanation: The path will be 1+5+7+10+12
+= 35.'''
+
+
+def maxSumPath(arr1, arr2):
+    for i in arr1:
+        
+        if i in arr2:
+            ind1 = arr1.index(i)
+            ind2 = arr2.index(i)
+            sums = sum(arr1[:ind1]) + sum(arr2[ind2:]) , sum(arr2[:ind2])+ sum(arr1[ind1:])
+    return max(sums)
+a = [2,3,7,10,12]    
+b = [1,5,7,]   
+print(maxSumPath(a,b))

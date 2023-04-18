@@ -1,10 +1,4 @@
-def average():
-    total_avg = 0
-    rep = int(input('count of nums'))
-    for i in range(0,rep):
-         a = int(input('enter nums'))
-         avg = a/(rep)
-         total_avg += avg
-    return total_avg
-print('average is ',average())
-
+string = '1 0 0 1 0 1'
+binary = string.replace(' ','') ## binary = string[::2] 
+result = int(binary,2)
+print(result)

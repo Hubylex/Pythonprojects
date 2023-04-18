@@ -1,0 +1,87 @@
+'''inheritance allows sub classes to inherit the characteristics 
+  of the parent/base/super class'''
+
+
+class Animal:
+    def __init__(self,name ,color):
+        self.name = name
+        self.color = color
+
+class Cat(Animal):
+    def purr(self):
+        print(self.name,'Purr...!!')
+
+class Dog(Animal):
+    def bark(self):
+        print(self.name,'Woof!')
+
+
+fido = Dog("fido","blue")
+jack = Cat('jack','yellow')
+print(fido.name)
+fido.bark()
+print(jack.color)
+jack.purr()
+
+print('---------')
+
+
+class Shape: 
+    def __init__(self, w, h):
+        self.width = w
+        self.height = h
+
+    def area(self):
+        print(self.width*self.height)
+
+class Rectangle(Shape):
+
+    def perimeter(self):
+        super().area()
+        print(2*(self.width + self.height))
+
+w = 4
+h = 3
+
+r = Rectangle(w, h)
+r.area()
+r.perimeter()
+
+
+print('---------')
+
+class human:
+    def __init__(self,sex,height):
+        self.sex = sex
+        self.height = height
+    def eat(self):
+        print('food is yummy')
+
+class Man(human):
+    def handsome(self):
+        print('hey handsome')
+    def eat(self):
+        print('tasty food')
+
+class Woman(human):
+    def beautiful(self):
+        print('hey pretty')
+
+kojo = Man('male',5)
+print(kojo.height)
+kojo.eat()
+
+
+print('---------')
+
+class A:
+    def spam(self):
+        print(1)
+
+class B(A):
+    def spam(self):
+        print(2)
+        super().spam()
+B().spam()
+
+##super().spam() calls the method of the superclass
