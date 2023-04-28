@@ -9,7 +9,9 @@ layout = [
 
 window = sg.Window('GAME',layout)
 
-while True:
+chances = 2
+
+while chances >= 0:
     user_points = 0
     event,values = window.read()
     if event == sg.WIN_CLOSED:
