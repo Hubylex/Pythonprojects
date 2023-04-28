@@ -9,3 +9,5 @@ def check_palindrom(text):
         return 'the following text IS  NOT palindrome'
 
 print(check_palindrom(input('enter')))
+
+
