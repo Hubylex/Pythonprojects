@@ -14,11 +14,11 @@ def ispar(x):
         '[':']'
         }
     
-    l_ = int(len(x))
+    lt = int(len(x))
     l = int(len(x)/2)
 
     for i in x[:l]:
-        if x.index(pairs[i])==(l_-1)-x.index(i):
+        if x.index(pairs[i])==(lt-1)-x.index(i):
             continue
         else:
             return False
