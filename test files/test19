@@ -1,12 +1,22 @@
-a = [1,2,3,4,5]
-print(a[:a.index(3)])
-print(a[2:])
-
-
-
-
-
-
+def isValid(s):
+    pairs = {
+        '{':'}',
+        '(':')',
+        '[':']'
+        }
+    if len(s)%2 != 0:
+        return False
+    for i in s:
+        if i in pairs.values():
+            continue
+        elif pairs[i] not in s:
+            return False
+        elif s.index(pairs[i]) - s.index(i)%2 != 0:
+            continue
+        else:
+            return False,i
+    return True
+print(isValid('([)]'))
 
 
 

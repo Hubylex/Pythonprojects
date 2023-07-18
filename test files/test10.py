@@ -8,5 +8,5 @@ data = {
     'Canada': 9,
     'Italy': 74
 }
-a = input()
+a = 6
 print(data.get(a, 'not founduk'))
