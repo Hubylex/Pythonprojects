@@ -1,12 +1,18 @@
+# a=1,2,3,7,5
+# s=12   n=5
+arr = [142,112,54,69,148,45,63,158,38,60,124,142,130,179,117,36,191,43,89,107,41,143,65,49,47,6,91,130,171,151,7,102,194,149,30,24,85,155,157,41,167,177,132,109,145,40,27,124,138,139,119,83,130,142,34,116,40,59,105,131,178,107,74,187,22,146,125,73,71,30,178,174,98,113]
+def subarraj(arr,n,s):
+    
+    summ = {}
+    for i in range(n+1):
+        for j in range(i+1,n+1):
+            summ[i,j] = sum(arr[i:j])
 
-# second smallest 
+            if summ[i,j] == s and i+1!=j:
+                return i+1,j
+    return '-1'          
+            
 
-list1 = [5,7,33,55,7,6,3,3,7,6]
 
-## change list1 into set(-does not contain dupicate numbers)
 
-list2 = list(set(list1))
-
-list2.sort()
-print('list2',list2)
-print(list2[1])
+print(subarraj(arr,74,665))
